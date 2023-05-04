@@ -1,0 +1,42 @@
+<div
+  style="background-color: #f8f9fa"
+  class="d-flex py-2 rounded-3 mt-2 post"
+  *ngFor="let post of posts$"
+>
+  <!-- Section to Display Votes-->
+  <app-vote-button [post]="post"></app-vote-button>
+  <!-- Section to Display Post Information-->
+  <div class="col-md-11">
+    <span class="subreddit-info">
+      <span class="subreddit-text"
+        ><a class="posturl" routerLink="">{{ post.subredditName }}</a></span
+      >
+      <span>
+        . Posted by
+        <a class="username" routerLink="/user/{{ post.userName }}">{{
+          post.userName
+        }}</a></span
+      >
+      <span> . {{ post.duration }}</span>
+    </span>
+    <hr />
+    <div class="post-title">
+      <a
+        class="postname font-weight-bold text-decoration-none"
+        href="{{ post.url }}"
+        >{{ post.postName }}</a
+      >
+    </div>
+    <div>
+      <p class="post-text text-red-300">{{ post.description }}</p>
+    </div>
+    <hr />
+    <span>
+      <a class="btnCommments text-decoration-none" role="button">
+        <fa-icon [icon]="faComments"></fa-icon>
+        <span class="ml-2"> Comments({{ post.commentCount }}) </span>
+      </a>
+      <button class="login">Read Post</button>
+    </span>
+  </div>
+</div>

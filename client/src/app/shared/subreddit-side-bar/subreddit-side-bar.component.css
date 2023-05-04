@@ -1,0 +1,36 @@
+.sidebar-view-subreddit {
+    height: 242px;
+    --post-line-color: #ccc;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #878A8C;
+    position: relative;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.sidebar-view-subreddit {
+    height: 280px;
+}
+
+.post_count {
+    background-color: #0079d3;
+    color: white;
+    padding: 6px;
+    width: 5px;
+    height: 5px;
+    border-radius: 14px;
+}
+
+.subreddit_name {
+    text-transform: capitalize;
+    font-weight: bold;
+}

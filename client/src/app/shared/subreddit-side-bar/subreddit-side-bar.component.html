@@ -1,0 +1,26 @@
+<div class="sidebar-view-subreddit">
+  <div style="color: black; font-weight: bold">Browse Subreddits</div>
+  <hr />
+  <span *ngFor="let subreddit of subreddits">
+    <div class="d-flex align-items-center">
+      <div class="left-side">
+        <span class="subreddit-text d-block"
+          ><a
+            class="subreddit_name"
+            href="/view-subreddit/{{ subreddit.id }}"
+            >{{ subreddit.name }}</a
+          ></span
+        >
+        <span>{{ subreddit.description }}</span>
+      </div>
+      <div class="right-side ms-auto me-1">
+        <span class="post_count">{{ subreddit.numberOfPosts }}</span>
+      </div>
+    </div>
+
+    <hr />
+  </span>
+  <div style="text-align: center" *ngIf="displayViewAll">
+    <a style="font-weight: bold" routerLink="/subreddits">View All</a>
+  </div>
+</div>

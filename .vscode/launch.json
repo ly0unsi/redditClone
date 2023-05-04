@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RedditApplication<reddit>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.reddit.reddit.RedditApplication",
+            "projectName": "reddit",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
